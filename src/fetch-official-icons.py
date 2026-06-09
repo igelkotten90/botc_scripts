@@ -15,8 +15,12 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets/icons/official"
+PHASE_OUT = ROOT / "assets/icons/phases"
 
 CDN = "https://release.botc.app/resources/characters"
+SCRIPT_TOOL_ICONS = "https://script.bloodontheclocktower.com/src/assets/icons"
+
+NIGHT_PHASE_ICONS = ("dusk", "dawn", "minioninfo", "demoninfo")
 
 OFFICIAL = {
     "virgin": ("tb", "townsfolk"),
@@ -82,8 +86,21 @@ def download_icon(edition: str, char_id: str, suffix: str) -> Image.Image:
     return Image.open(io.BytesIO(data))
 
 
+def download_phase_icons() -> None:
+    PHASE_OUT.mkdir(parents=True, exist_ok=True)
+    for phase_id in NIGHT_PHASE_ICONS:
+        url = f"{SCRIPT_TOOL_ICONS}/{phase_id}.webp"
+        dest = PHASE_OUT / f"{phase_id}.webp"
+        with urllib.request.urlopen(url, timeout=30) as resp:
+            dest.write_bytes(resp.read())
+        print(f"  {phase_id}.webp")
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
+
+    print("Night phase icons:")
+    download_phase_icons()
 
     for char_id, (edition, team) in OFFICIAL.items():
         suffix = "g" if is_good_team(team) else "e"

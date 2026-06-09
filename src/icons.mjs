@@ -18,6 +18,25 @@ export const OFFICIAL_ICONS = {
 
 export const CDN_BASE = "https://release.botc.app/resources/characters";
 
+/** Night phase icons (Dusk, Dawn, Minion Info, Demon Info) — same URLs as Script Tool */
+export const SCRIPT_TOOL_ICON_BASE =
+  "https://script.bloodontheclocktower.com/src/assets/icons";
+
+export const NIGHT_PHASE_ICON_IDS = [
+  "dusk",
+  "dawn",
+  "minioninfo",
+  "demoninfo",
+];
+
+export function nightPhaseIconUrl(id) {
+  return `${SCRIPT_TOOL_ICON_BASE}/${id}.webp`;
+}
+
+export function nightPhaseIconLocalPath(id) {
+  return `assets/icons/phases/${id}.webp`;
+}
+
 /** Public raw URLs for Script Tool import (custom icons only). */
 export const GITHUB_RAW_BASE =
   "https://raw.githubusercontent.com/igelkotten90/botc_scripts/main";

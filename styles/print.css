@@ -233,10 +233,6 @@ body {
   page-break-inside: avoid;
 }
 
-.night-sheet .item.special {
-  grid-template-columns: 1fr;
-}
-
 .night-sheet .item.special .night-sheet-char-name {
   font-weight: 700;
 }
@@ -246,21 +242,14 @@ body {
   height: 3rem;
   object-fit: contain;
   justify-self: end;
+  grid-column: 1;
 }
 
 .night-sheet .night-order-text {
   display: none;
 }
 
-.night-sheet .item:not(.special) {
-  grid-template-columns: 4.5rem 1fr;
-}
-
-.night-sheet .item:not(.special) .icon {
-  grid-column: 1;
-}
-
-.night-sheet .item:not(.special) .night-body {
+.night-sheet .item .night-body {
   grid-column: 2;
 }
 
@@ -488,6 +477,57 @@ body {
 
   .night-sheet .night-sheet-reminder {
     font-size: 1.1rem;
+  }
+
+  /* Other Nights: 20 steps — compact layout to fit one A4 page */
+  .night-sheet.other-nights {
+    box-sizing: border-box;
+    width: 210mm;
+    max-width: 210mm;
+    height: 297mm;
+    max-height: 297mm;
+    padding: 5mm 8mm 4mm;
+    page-break-after: always;
+    page-break-inside: avoid;
+    overflow: hidden;
+    font-size: 1rem;
+  }
+
+  .night-sheet.other-nights h3 {
+    margin: 0 0 1.5mm;
+    padding: 0;
+    font-size: 1.05rem;
+  }
+
+  .night-sheet.other-nights h3::after {
+    top: 0.65rem;
+  }
+
+  .night-sheet.other-nights .other-night {
+    row-gap: 0.25rem;
+  }
+
+  .night-sheet.other-nights .item {
+    grid-template-columns: 1.85rem 1fr;
+    gap: 0.55rem;
+    align-items: start;
+  }
+
+  .night-sheet.other-nights .item .icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-top: 0.05rem;
+  }
+
+  .night-sheet.other-nights .night-sheet-char-name {
+    font-size: 1rem;
+    line-height: 1.12;
+  }
+
+  .night-sheet.other-nights .night-sheet-reminder {
+    font-size: 0.92rem;
+    line-height: 1.2;
+    margin-top: 0.05rem;
   }
 }
 

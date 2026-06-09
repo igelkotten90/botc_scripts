@@ -24,6 +24,8 @@ import {
   customIconFlipPath,
   customIconJsonPairRaw,
   isGoodTeam,
+  nightPhaseIconUrl,
+  nightPhaseIconLocalPath,
 } from "./icons.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -31,10 +33,17 @@ const ROOT = join(__dirname, "..");
 
 function ensureOfficialIcons() {
   const marker = join(ROOT, "assets/icons/official/virgin_g.png");
-  if (existsSync(marker)) return;
+  const phaseMarker = join(ROOT, "assets/icons/phases/dusk.webp");
+  if (existsSync(marker) && existsSync(phaseMarker)) return;
   spawnSync("python3", [join(__dirname, "fetch-official-icons.py")], {
     stdio: "inherit",
   });
+}
+
+function phaseIconSrc(id) {
+  const local = join(ROOT, "assets/icons/phases", `${id}.webp`);
+  if (existsSync(local)) return nightPhaseIconLocalPath(id);
+  return nightPhaseIconUrl(id);
 }
 
 function escapeHtml(text) {
@@ -137,7 +146,9 @@ function renderNightItem(entry, phase, wakeIndex) {
       phase === "first"
         ? phaseData.firstNightReminder
         : phaseData.otherNightReminder;
+    const src = phaseIconSrc(entry);
     return `<div class="item special">
+  <img class="icon special" src="${src}" alt="" width="48" height="48" />
   <div class="night-body">
     <p class="night-sheet-char-name">${escapeHtml(phaseData.label)}</p>
     ${reminder ? `<p class="night-sheet-reminder">${formatReminder(reminder)}</p>` : ""}
@@ -178,7 +189,9 @@ function renderNightPage(title, order, phase) {
     .join("\n");
 
   const listClass = phase === "first" ? "first-night" : "other-night";
-  return `<section class="night-sheet">
+  const sectionClass =
+    phase === "other" ? "night-sheet other-nights" : "night-sheet";
+  return `<section class="${sectionClass}">
   <h3><span>${escapeHtml(title)}</span></h3>
   <div class="${listClass}">${items}</div>
 </section>`;

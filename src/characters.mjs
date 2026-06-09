@@ -220,9 +220,9 @@ export const CHARACTERS = [
     firstNight: 17,
     otherNight: 17,
     firstNightReminder:
-      "The Bad Caterer chooses a player. They are poisoned. :reminder:",
+      "The Bad Caterer chooses a player. They are poisoned. If a Grandmother is chosen, they die instead and tomorrow morning all learn a Bad Caterer is in play. :reminder:",
     otherNightReminder:
-      "The Bad Caterer chooses a player. They are poisoned. If a Grandmother is chosen, they die instead and all learn a Bad Caterer is in play. :reminder:",
+      "The Bad Caterer chooses a player. They are poisoned. If a Grandmother is chosen, they die instead and tomorrow morning all learn a Bad Caterer is in play. :reminder:",
   },
   {
     id: "godfather",

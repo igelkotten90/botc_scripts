@@ -1,0 +1,257 @@
+[
+  {
+    "id": "_meta",
+    "name": "The Wedding",
+    "author": "",
+    "firstNight": [
+      "dusk",
+      "minioninfo",
+      "demoninfo",
+      "weddingcrasher",
+      "lleech",
+      "badcaterer",
+      "godfather",
+      "maidofhonor",
+      "chef",
+      "emilybride",
+      "oskargroom",
+      "bestman",
+      "grandmother",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "weddingcrasher",
+      "badcaterer",
+      "scarletwoman",
+      "imp",
+      "fanggu",
+      "ojo",
+      "lleech",
+      "godfather",
+      "gossip",
+      "weirduncle",
+      "grandmother",
+      "maliciousorganist",
+      "priest",
+      "emilybride",
+      "oskargroom",
+      "bestman",
+      "flowergirl",
+      "photographer",
+      "dawn"
+    ]
+  },
+  {
+    "id": "emilybride",
+    "name": "Emily, The Bride",
+    "team": "townsfolk",
+    "edition": "custom",
+    "image": [
+      "assets/icons/custom/emilybride_g.png",
+      "assets/icons/custom/emilybride_e.png"
+    ],
+    "ability": "Each night, choose a player. You learn if they are a Townsfolk. Either the Bride or the Groom is drunk while both are alive. [+1 Groom]",
+    "setup": true,
+    "firstNight": 52,
+    "otherNight": 52,
+    "firstNightReminder": "The Bride chooses a player. Show the thumbs-up or thumbs-down. :reminder:",
+    "otherNightReminder": "The Bride chooses a player. Show the thumbs-up or thumbs-down. :reminder:",
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  {
+    "id": "oskargroom",
+    "name": "Oskar, The Groom",
+    "team": "townsfolk",
+    "edition": "custom",
+    "image": [
+      "assets/icons/custom/oskargroom_g.png",
+      "assets/icons/custom/oskargroom_e.png"
+    ],
+    "ability": "Each night, choose 2 players. You learn if at least one of them is a Minion. Either the Groom or the Bride is drunk while both are alive. [+1 Bride]",
+    "setup": true,
+    "firstNight": 53,
+    "otherNight": 53,
+    "firstNightReminder": "The Groom chooses 2 players. Show the thumbs-up or thumbs-down. :reminder:",
+    "otherNightReminder": "The Groom chooses 2 players. Show the thumbs-up or thumbs-down. :reminder:",
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  "virgin",
+  {
+    "id": "priest",
+    "name": "Priest",
+    "team": "townsfolk",
+    "edition": "custom",
+    "image": [
+      "assets/icons/custom/priest_g.png",
+      "assets/icons/custom/priest_e.png"
+    ],
+    "ability": "On the 3rd night, you learn 2 Demons, at least 1 of which is in play.",
+    "setup": false,
+    "firstNight": 0,
+    "otherNight": 48,
+    "firstNightReminder": "",
+    "otherNightReminder": "On the 3rd night only: show 2 Demon character tokens. :reminder:",
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  "chef",
+  "grandmother",
+  {
+    "id": "bestman",
+    "name": "Best Man",
+    "team": "townsfolk",
+    "edition": "custom",
+    "image": [
+      "assets/icons/custom/bestman_g.png",
+      "assets/icons/custom/bestman_e.png"
+    ],
+    "ability": "Each night, choose 2 players: you learn if they are the same alignment. There is a good player who registers as evil to you.",
+    "setup": false,
+    "firstNight": 58,
+    "otherNight": 58,
+    "firstNightReminder": "The Best Man chooses 2 players. Show the thumbs-up or thumbs-down. :reminder:",
+    "otherNightReminder": "The Best Man chooses 2 players. Show the thumbs-up or thumbs-down. :reminder:",
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  {
+    "id": "maidofhonor",
+    "name": "Maid of Honor",
+    "team": "townsfolk",
+    "edition": "custom",
+    "image": [
+      "assets/icons/custom/maidofhonor_g.png",
+      "assets/icons/custom/maidofhonor_e.png"
+    ],
+    "ability": "You start knowing an in-play Outsider (or that none are in play) and an in-play Minion (or that none are in play).",
+    "setup": false,
+    "firstNight": 38,
+    "otherNight": 0,
+    "firstNightReminder": "Show an Outsider character token, or show zero. Show a Minion character token, or show zero. :reminder:",
+    "otherNightReminder": "",
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  "flowergirl",
+  {
+    "id": "photographer",
+    "name": "Photographer",
+    "team": "townsfolk",
+    "edition": "custom",
+    "image": [
+      "assets/icons/custom/photographer_g.png",
+      "assets/icons/custom/photographer_e.png"
+    ],
+    "ability": "On day, publicly choose 5 players. That night, you learn how many were Outsiders.",
+    "setup": false,
+    "firstNight": 0,
+    "otherNight": 62,
+    "firstNightReminder": "",
+    "otherNightReminder": "If the Photographer chose 5 players today, show the number of Outsiders among them. :reminder:",
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  "cannibal",
+  {
+    "id": "toastmaster",
+    "name": "Toastmaster",
+    "team": "townsfolk",
+    "edition": "custom",
+    "image": [
+      "assets/icons/custom/toastmaster_g.png",
+      "assets/icons/custom/toastmaster_e.png"
+    ],
+    "ability": "Once per game, publicly give a toast. Neither the Bride nor the Groom can die before tomorrow.",
+    "setup": false,
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  "gossip",
+  "drunk",
+  {
+    "id": "weirduncle",
+    "name": "Weird Uncle",
+    "team": "outsider",
+    "edition": "custom",
+    "image": [
+      "assets/icons/custom/weirduncle_g.png",
+      "assets/icons/custom/weirduncle_e.png"
+    ],
+    "ability": "1 of your Townsfolk neighbors is poisoned. If you are executed, one of your Townsfolk neighbors may die tonight.",
+    "setup": true,
+    "firstNight": 0,
+    "otherNight": 65,
+    "firstNightReminder": "",
+    "otherNightReminder": "If the Weird Uncle was executed today, one of their Townsfolk neighbors may die. :reminder:",
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  {
+    "id": "weddingcrasher",
+    "name": "Wedding Crasher",
+    "team": "outsider",
+    "edition": "custom",
+    "image": [
+      "assets/icons/custom/weddingcrasher_g.png",
+      "assets/icons/custom/weddingcrasher_e.png"
+    ],
+    "ability": "Each night, choose an alive player. If they are a Townsfolk, they are drunk until dusk.",
+    "setup": false,
+    "firstNight": 24,
+    "otherNight": 24,
+    "firstNightReminder": "The Wedding Crasher chooses a player. If they are a Townsfolk, they are drunk. :reminder:",
+    "otherNightReminder": "The Wedding Crasher chooses a player. If they are a Townsfolk, they are drunk. :reminder:",
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  "klutz",
+  "scarletwoman",
+  {
+    "id": "maliciousorganist",
+    "name": "Malicious Organist",
+    "team": "minion",
+    "edition": "custom",
+    "image": [
+      "assets/icons/custom/maliciousorganist_e.png",
+      "assets/icons/custom/maliciousorganist_g.png"
+    ],
+    "ability": "If an Outsider dies at night, you learn a Townsfolk character and player. [+1 Outsider]",
+    "setup": true,
+    "firstNight": 0,
+    "otherNight": 72,
+    "firstNightReminder": "",
+    "otherNightReminder": "If an Outsider died tonight, show a Townsfolk character token and point to a player. :reminder:",
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  {
+    "id": "badcaterer",
+    "name": "Bad Caterer",
+    "team": "minion",
+    "edition": "custom",
+    "image": [
+      "assets/icons/custom/badcaterer_e.png",
+      "assets/icons/custom/badcaterer_g.png"
+    ],
+    "ability": "Each night, choose a player: they are poisoned until dusk. A chosen Grandmother dies instead, and all players learn that a Bad Caterer is in play.",
+    "setup": false,
+    "firstNight": 17,
+    "otherNight": 17,
+    "firstNightReminder": "The Bad Caterer chooses a player. They are poisoned. :reminder:",
+    "otherNightReminder": "The Bad Caterer chooses a player. They are poisoned. If a Grandmother is chosen, they die instead and all learn a Bad Caterer is in play. :reminder:",
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  "godfather",
+  "fanggu",
+  "lleech",
+  "ojo",
+  "imp"
+]

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wedding — Blood on the Clocktower Script</title>
+  <link rel="stylesheet" href="styles/print.css" />
+</head>
+<body>
+  <div class="noprint">
+    <strong>The Wedding</strong>
+    <button type="button" onclick="window.print()">Print / Save PDF</button>
+    <span>A4 · no margins · backgrounds on</span>
+  </div>
+
+  <div id="script">
+    <div class="character-sheet">
+      <div class="character-sheet-content">
+        <div id="title-container">
+          <h1>The Wedding</h1>
+        </div>
+        <div class="script-teams">
+          <section class="team-section">
+<h3><span>Townsfolk</span></h3>
+<div class="townsfolk" style="--nitems: 13; --nrows: 7"><div class="item">
+  <img class="icon" src="assets/icons/custom/emilybride_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Emily, The Bride</p>
+    <p class="character-summary">Each night, choose a player. You learn if they are a Townsfolk. Either the Bride or the Groom is drunk while both are alive. [+1 Groom]</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/oskargroom_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Oskar, The Groom</p>
+    <p class="character-summary">Each night, choose 2 players. You learn if at least one of them is a Minion. Either the Groom or the Bride is drunk while both are alive. [+1 Bride]</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/virgin_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Virgin</p>
+    <p class="character-summary">The 1st time you are nominated, if the nominator is a Townsfolk, they are executed immediately.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/priest_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Priest</p>
+    <p class="character-summary">On the 3rd night, you learn 2 Demons, at least 1 of which is in play.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/chef_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Chef</p>
+    <p class="character-summary">You start knowing how many pairs of evil players there are.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/grandmother_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Grandmother</p>
+    <p class="character-summary">You start knowing a good player &amp; their character. If the Demon kills them, you die too.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/bestman_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Best Man</p>
+    <p class="character-summary">Each night, choose 2 players: you learn if they are the same alignment. There is a good player who registers as evil to you.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/maidofhonor_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Maid of Honor</p>
+    <p class="character-summary">You start knowing an in-play Outsider (or that none are in play) and an in-play Minion (or that none are in play).</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/flowergirl_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Flowergirl</p>
+    <p class="character-summary">Each night*, you learn if a Demon voted today.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/photographer_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Photographer</p>
+    <p class="character-summary">On day, publicly choose 5 players. That night, you learn how many were Outsiders.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/cannibal_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Cannibal</p>
+    <p class="character-summary">You have the ability of the recently killed executee. If they are evil, you are poisoned until a good player dies by execution.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/toastmaster_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Toastmaster</p>
+    <p class="character-summary">Once per game, publicly give a toast. Neither the Bride nor the Groom can die before tomorrow.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/gossip_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Gossip</p>
+    <p class="character-summary">Each day, you may make a public statement. Tonight, if it was true, a player dies.</p>
+  </div>
+</div></div>
+</section>
+<section class="team-section">
+<h3><span>Outsiders</span></h3>
+<div class="outsider" style="--nitems: 4; --nrows: 2"><div class="item">
+  <img class="icon" src="assets/icons/official/drunk_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Drunk</p>
+    <p class="character-summary">You do not know you are the Drunk. You think you are a Townsfolk character, but you are not.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/weirduncle_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Weird Uncle</p>
+    <p class="character-summary">1 of your Townsfolk neighbors is poisoned. If you are executed, one of your Townsfolk neighbors may die tonight.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/weddingcrasher_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Wedding Crasher</p>
+    <p class="character-summary">Each night, choose an alive player. If they are a Townsfolk, they are drunk until dusk.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/klutz_g.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Klutz</p>
+    <p class="character-summary">When you learn that you died, publicly choose 1 alive player: if they are evil, your team loses.</p>
+  </div>
+</div></div>
+</section>
+<section class="team-section">
+<h3><span>Minions</span></h3>
+<div class="minion" style="--nitems: 4; --nrows: 2"><div class="item">
+  <img class="icon" src="assets/icons/official/scarletwoman_e.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Scarlet Woman</p>
+    <p class="character-summary">If there are 5 or more players alive &amp; the Demon dies, you become the Demon.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/maliciousorganist_e.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Malicious Organist</p>
+    <p class="character-summary">If an Outsider dies at night, you learn a Townsfolk character and player. [+1 Outsider]</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/badcaterer_e.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Bad Caterer</p>
+    <p class="character-summary">Each night, choose a player: they are poisoned until dusk. A chosen Grandmother dies instead, and all players learn that a Bad Caterer is in play.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/godfather_e.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Godfather</p>
+    <p class="character-summary">You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [-1 or +1 Outsider]</p>
+  </div>
+</div></div>
+</section>
+<section class="team-section">
+<h3><span>Demons</span></h3>
+<div class="demon" style="--nitems: 4; --nrows: 2"><div class="item">
+  <img class="icon" src="assets/icons/official/fanggu_e.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Fang Gu</p>
+    <p class="character-summary">Each night*, choose a player: they die. The 1st Outsider this kills becomes an evil Fang Gu &amp; you die instead. [+1 Outsider]</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/lleech_e.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Lleech</p>
+    <p class="character-summary">Each night*, choose a player: they die. You start by choosing a player: they are poisoned. You die if &amp; only if they are dead.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/ojo_e.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Ojo</p>
+    <p class="character-summary">Each night*, choose a character: they die. If they are not in play, the Storyteller chooses who dies.</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/imp_e.png" alt="" width="72" height="72" loading="lazy" />
+  <div class="name-and-summary">
+    <p class="character-name">Imp</p>
+    <p class="character-summary">Each night*, choose a player: they die. If you kill yourself this way, a Minion becomes the Imp.</p>
+  </div>
+</div></div>
+</section>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="print-footer">
+          <div class="copyright">© Steven Medway, bloodontheclocktower.com</div>
+          <div class="page-one">* Not the first night</div>
+        </div>
+        <p class="ccc">Unofficial fan content. Community Created Content using materials from Blood on the Clocktower by Steven Medway and The Pandemonium Institute.</p>
+      </div>
+    </div>
+
+    <section class="night-sheet">
+  <h3><span>First Night</span></h3>
+  <div class="first-night"><div class="item special">
+  <div class="night-label">Dusk</div>
+</div>
+<div class="item special">
+  <div class="night-label">Minion Info</div>
+</div>
+<div class="item special">
+  <div class="night-label">Demon Info</div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/weddingcrasher_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Wedding Crasher</p>
+    <p class="night-sheet-reminder">The Wedding Crasher chooses a player. If they are a Townsfolk, they are drunk. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/lleech_e.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Lleech</p>
+    <p class="night-sheet-reminder">The Lleech chooses a player. They are poisoned. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/badcaterer_e.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Bad Caterer</p>
+    <p class="night-sheet-reminder">The Bad Caterer chooses a player. They are poisoned. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/godfather_e.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Godfather</p>
+    <p class="night-sheet-reminder">Show the Outsider character tokens in play. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/maidofhonor_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Maid of Honor</p>
+    <p class="night-sheet-reminder">Show an Outsider character token, or show zero. Show a Minion character token, or show zero. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/chef_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Chef</p>
+    <p class="night-sheet-reminder">Show the number of pairs of evil players. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/emilybride_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Emily, The Bride</p>
+    <p class="night-sheet-reminder">The Bride chooses a player. Show the thumbs-up or thumbs-down. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/oskargroom_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Oskar, The Groom</p>
+    <p class="night-sheet-reminder">The Groom chooses 2 players. Show the thumbs-up or thumbs-down. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/bestman_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Best Man</p>
+    <p class="night-sheet-reminder">The Best Man chooses 2 players. Show the thumbs-up or thumbs-down. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/grandmother_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Grandmother</p>
+    <p class="night-sheet-reminder">Show a good character token and point to a player. ⏺</p>
+  </div>
+</div>
+<div class="item special">
+  <div class="night-label">Dawn</div>
+</div></div>
+</section>
+    <section class="night-sheet">
+  <h3><span>Other Nights</span></h3>
+  <div class="other-night"><div class="item special">
+  <div class="night-label">Dusk</div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/weddingcrasher_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Wedding Crasher</p>
+    <p class="night-sheet-reminder">The Wedding Crasher chooses a player. If they are a Townsfolk, they are drunk. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/badcaterer_e.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Bad Caterer</p>
+    <p class="night-sheet-reminder">The Bad Caterer chooses a player. They are poisoned. If a Grandmother is chosen, they die instead and all learn a Bad Caterer is in play. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/scarletwoman_e.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Scarlet Woman</p>
+    <p class="night-sheet-reminder">If the Demon died tonight and 5+ players are alive, the Scarlet Woman becomes the Demon. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/imp_e.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Imp</p>
+    <p class="night-sheet-reminder">The Imp chooses a player. That player dies. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/fanggu_e.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Fang Gu</p>
+    <p class="night-sheet-reminder">The Fang Gu chooses a player. ⏺ If they chose an Outsider (once only): replace the Outsider token with the spare Fang Gu token. The Fang Gu dies. Wake the target. Show the YOU ARE and Fang Gu tokens. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/ojo_e.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Ojo</p>
+    <p class="night-sheet-reminder">The Ojo chooses a character. That character dies, or the Storyteller chooses who dies. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/lleech_e.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Lleech</p>
+    <p class="night-sheet-reminder">The Lleech chooses a player. That player dies. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/godfather_e.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Godfather</p>
+    <p class="night-sheet-reminder">If an Outsider died today, the Godfather chooses a player. That player dies. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/gossip_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Gossip</p>
+    <p class="night-sheet-reminder">If the Gossip made a true public statement today, a player dies. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/weirduncle_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Weird Uncle</p>
+    <p class="night-sheet-reminder">If the Weird Uncle was executed today, one of their Townsfolk neighbors may die. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/grandmother_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Grandmother</p>
+    
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/maliciousorganist_e.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Malicious Organist</p>
+    <p class="night-sheet-reminder">If an Outsider died tonight, show a Townsfolk character token and point to a player. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/priest_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Priest</p>
+    <p class="night-sheet-reminder">On the 3rd night only: show 2 Demon character tokens. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/emilybride_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Emily, The Bride</p>
+    <p class="night-sheet-reminder">The Bride chooses a player. Show the thumbs-up or thumbs-down. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/oskargroom_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Oskar, The Groom</p>
+    <p class="night-sheet-reminder">The Groom chooses 2 players. Show the thumbs-up or thumbs-down. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/bestman_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Best Man</p>
+    <p class="night-sheet-reminder">The Best Man chooses 2 players. Show the thumbs-up or thumbs-down. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/official/flowergirl_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Flowergirl</p>
+    <p class="night-sheet-reminder">Show the thumbs-up or thumbs-down for whether a Demon voted today. ⏺</p>
+  </div>
+</div>
+<div class="item">
+  <img class="icon" src="assets/icons/custom/photographer_g.png" alt="" width="48" height="48" />
+  <div class="night-body">
+    <p class="night-sheet-char-name">Photographer</p>
+    <p class="night-sheet-reminder">If the Photographer chose 5 players today, show the number of Outsiders among them. ⏺</p>
+  </div>
+</div>
+<div class="item special">
+  <div class="night-label">Dawn</div>
+</div></div>
+</section>
+  </div>
+</body>
+</html>

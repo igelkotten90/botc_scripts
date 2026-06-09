@@ -18,6 +18,10 @@ export const OFFICIAL_ICONS = {
 
 export const CDN_BASE = "https://release.botc.app/resources/characters";
 
+/** Public raw URLs for Script Tool import (custom icons only). */
+export const GITHUB_RAW_BASE =
+  "https://raw.githubusercontent.com/igelkotten90/botc_scripts/main";
+
 /** Good = Townsfolk & Outsiders (blue). Evil = Minions & Demons (red). */
 export function isGoodTeam(team) {
   return team === "townsfolk" || team === "outsider";
@@ -55,4 +59,15 @@ export function customIconFlipPath(id, team) {
   const alignment = iconAlignmentForTeam(team);
   const flip = alignment === "g" ? "e" : "g";
   return `assets/icons/custom/${id}_${flip}.png`;
+}
+
+export function customIconRawUrl(id, alignment) {
+  return `${GITHUB_RAW_BASE}/assets/icons/custom/${id}_${alignment}.png`;
+}
+
+/** image pair for script.json — absolute URLs for Script Tool import */
+export function customIconJsonPairRaw(char) {
+  const g = customIconRawUrl(char.id, "g");
+  const e = customIconRawUrl(char.id, "e");
+  return isGoodTeam(char.team) ? [g, e] : [e, g];
 }

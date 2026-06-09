@@ -21,6 +21,7 @@ import {
   officialIconJsonPair,
   customIconPath,
   customIconFlipPath,
+  customIconJsonPairRaw,
   isGoodTeam,
 } from "./icons.mjs";
 
@@ -57,9 +58,7 @@ function iconSrc(char) {
 
 function iconPairForJson(char) {
   if (char.custom) {
-    const primary = customIconPath(char.id, char.team);
-    const flip = customIconFlipPath(char.id, char.team);
-    return isGoodTeam(char.team) ? [primary, flip] : [primary, flip];
+    return customIconJsonPairRaw(char);
   }
   const id = char.officialId ?? char.id;
   const gLocal = join(ROOT, "assets/icons/official", `${id}_g.png`);

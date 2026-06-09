@@ -221,7 +221,7 @@ Remote: `git@github.com:igelkotten90/botc_scripts.git`, branch `main`.
 
 - No npm/package.json — plain Node + Python scripts only
 - `assets/icons/reference/` contains download references; not used in build output
-- Script Tool import may need hosted icon URLs for custom characters (see README)
+- Script Tool import: run `node src/build.mjs`, paste `data/script.json` at [script.bloodontheclocktower.com](https://script.bloodontheclocktower.com/). Custom icons in JSON use GitHub raw URLs (`GITHUB_RAW_BASE` in `src/icons.mjs`); push to `main` before importing so icons load. Local `index.html` still uses relative paths.
 - `process-icons.py` SOURCE path is machine-specific (see Icons section)
 - Grandmother appears on Other Nights sheet per user order but has no other-night ST reminder (name-only row)
 

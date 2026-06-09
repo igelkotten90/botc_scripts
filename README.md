@@ -44,7 +44,12 @@ Custom token art lives in `assets/icons/custom/` (transparent PNGs). Official ic
 
 ## Importing into the official Script Tool
 
-`data/script.json` uses the standard schema. Custom character icons use relative paths (`assets/icons/custom/...`). For import at [script.bloodontheclocktower.com](https://script.bloodontheclocktower.com/), you may need to host icon files online or paste full JSON with absolute URLs.
+1. Run `node src/build.mjs` to regenerate `data/script.json`.
+2. Open [script.bloodontheclocktower.com](https://script.bloodontheclocktower.com/) and import/paste `data/script.json`.
+3. Custom character icons use GitHub raw URLs (`https://raw.githubusercontent.com/igelkotten90/botc_scripts/main/assets/icons/custom/...`) so the tool can load them in the browser. **Push icon changes to GitHub before importing** if you added or updated custom art.
+4. Official characters are referenced by ID and resolve from the tool’s built-in library.
+
+Local `index.html` still uses relative icon paths for offline printing.
 
 ## Attribution
 

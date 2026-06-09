@@ -40,12 +40,38 @@ export const OTHER_NIGHT_ORDER = [
   "dawn",
 ];
 
-export const NIGHT_LABELS = {
-  dusk: "Dusk",
-  dawn: "Dawn",
-  minioninfo: "Minion Info",
-  demoninfo: "Demon Info",
+export const NIGHT_PHASES = {
+  dusk: {
+    label: "Dusk",
+    firstNightReminder:
+      "Confirm all players have eyes closed. Wait approximately 10 seconds. Each Traveller with a first-night ability acts.",
+    otherNightReminder:
+      "Confirm all players have eyes closed. Wait approximately 10 seconds. Each Traveller acts.",
+  },
+  minioninfo: {
+    label: "Minion Info",
+    firstNightReminder:
+      "If there are 7 or more players, wake all Minions: Show the THIS IS THE DEMON token. Point to the Demon. :reminder: Show the THESE ARE YOUR MINIONS token. Point to the other Minions. :reminder:",
+    otherNightReminder: "",
+  },
+  demoninfo: {
+    label: "Demon Info",
+    firstNightReminder:
+      "If there are 7 or more players, wake the Demon: Show the THESE ARE YOUR MINIONS token. Point to all Minions. :reminder: Show the THESE CHARACTERS ARE NOT IN PLAY token. Show 3 not-in-play good character tokens. :reminder:",
+    otherNightReminder: "",
+  },
+  dawn: {
+    label: "Dawn",
+    firstNightReminder:
+      "Wait approximately 10 seconds. Call for eyes open; immediately announce players who died.",
+    otherNightReminder:
+      "Wait approximately 10 seconds. Call for eyes open; immediately announce which players died, and which players are newly alive.",
+  },
 };
+
+export const NIGHT_LABELS = Object.fromEntries(
+  Object.entries(NIGHT_PHASES).map(([id, phase]) => [id, phase.label])
+);
 
 /** Default official night data for characters referenced by ID only */
 export const OFFICIAL_NIGHT_DEFAULTS = {

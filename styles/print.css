@@ -237,7 +237,7 @@ body {
   grid-template-columns: 1fr;
 }
 
-.night-sheet .item.special .night-label {
+.night-sheet .item.special .night-sheet-char-name {
   font-weight: 700;
 }
 

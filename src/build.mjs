@@ -13,6 +13,7 @@ import {
   FIRST_NIGHT_ORDER,
   OTHER_NIGHT_ORDER,
   NIGHT_LABELS,
+  NIGHT_PHASES,
   resolveNightData,
 } from "./night-order.mjs";
 import {
@@ -130,9 +131,17 @@ function renderCharacterRow(char) {
 }
 
 function renderNightItem(entry, phase, wakeIndex) {
-  if (NIGHT_LABELS[entry]) {
+  if (NIGHT_PHASES[entry]) {
+    const phaseData = NIGHT_PHASES[entry];
+    const reminder =
+      phase === "first"
+        ? phaseData.firstNightReminder
+        : phaseData.otherNightReminder;
     return `<div class="item special">
-  <div class="night-label">${escapeHtml(NIGHT_LABELS[entry])}</div>
+  <div class="night-body">
+    <p class="night-sheet-char-name">${escapeHtml(phaseData.label)}</p>
+    ${reminder ? `<p class="night-sheet-reminder">${formatReminder(reminder)}</p>` : ""}
+  </div>
 </div>`;
   }
 
@@ -157,7 +166,7 @@ function renderNightPage(title, order, phase) {
   let wakeIndex = 0;
   const items = order
     .map((entry) => {
-      const isSpecial = Boolean(NIGHT_LABELS[entry]);
+      const isSpecial = Boolean(NIGHT_PHASES[entry]);
       const item = renderNightItem(
         entry,
         phase,

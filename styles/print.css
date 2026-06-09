@@ -151,6 +151,13 @@ body {
   margin: 0;
 }
 
+/* Custom tokens fill more of the canvas than official CDN icons */
+#script .item .icon.custom {
+  width: 3.15em;
+  height: 3.15em;
+  justify-self: center;
+}
+
 #script .name-and-summary {
   display: flex;
   flex-direction: column;

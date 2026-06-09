@@ -130,8 +130,9 @@ function buildScriptJson() {
 
 function renderCharacterRow(char) {
   const src = iconSrc(char);
+  const iconClass = char.custom ? "icon custom" : "icon";
   return `<div class="item">
-  <img class="icon" src="${src}" alt="" width="72" height="72" loading="lazy" />
+  <img class="${iconClass}" src="${src}" alt="" width="72" height="72" loading="lazy" />
   <div class="name-and-summary">
     <p class="character-name">${escapeHtml(char.name)}</p>
     <p class="character-summary">${escapeHtml(char.ability)}</p>

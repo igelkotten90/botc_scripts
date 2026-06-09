@@ -44,9 +44,9 @@ export const NIGHT_PHASES = {
   dusk: {
     label: "Dusk",
     firstNightReminder:
-      "Confirm all players have eyes closed. Wait approximately 10 seconds. Each Traveller with a first-night ability acts.",
+      "Start the Night Phase.",
     otherNightReminder:
-      "Confirm all players have eyes closed. Wait approximately 10 seconds. Each Traveller acts.",
+      "Start the Night Phase.",
   },
   minioninfo: {
     label: "Minion Info",
@@ -63,9 +63,9 @@ export const NIGHT_PHASES = {
   dawn: {
     label: "Dawn",
     firstNightReminder:
-      "Wait approximately 10 seconds. Call for eyes open; immediately announce players who died.",
+      "Wait approximately 10 seconds. End the Night Phase.",
     otherNightReminder:
-      "Wait approximately 10 seconds. Call for eyes open; immediately announce which players died, and which players are newly alive.",
+      "Wait approximately 10 seconds. End the Night Phase.",
   },
 };
 
